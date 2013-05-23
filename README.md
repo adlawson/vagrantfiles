@@ -6,13 +6,13 @@ Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Pr
 from [Vagrantbox.es][vagrantboxes] and simply uses `apt-get` to install dependencies.
 
 
- - [**Node.js**][vagrantfile-nodejs] (Latest stable from ppa:chris-lea/node.js)
- - [**PHP**][vagrantfile-php] (Latest stable from ppa:ondrej/php5 *plus* [Composer][composer])
+ - [**Node.js**][vagrantfile-nodejs] (Latest stable from `ppa:chris-lea/node.js`)
+ - [**PHP**][vagrantfile-php] (Latest stable from `ppa:ondrej/php5` *plus* [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
- - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via RVM)
+ - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
 
 
-Vagrant will mount your directory to `/srv` via your privider's shared folder feature.
+[Vagrant][vagrant] will mount your directory to `/srv` via your provider's shared folder feature.
 Alternatively, you can use NFS by replacing the `synced_folder` line with this:
 
 ```ruby
