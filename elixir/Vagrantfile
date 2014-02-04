@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   # Setup
   config.vm.provision :shell, :inline => "apt-get update --fix-missing"
-  config.vm.provision :shell, :inline => "apt-get install -q -y python-software-properties python g++ make git curl"
+  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
   config.vm.provision :shell, :inline => "wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb"
   config.vm.provision :shell, :inline => "dpkg -i erlang-solutions_1.0_all.deb"
   config.vm.provision :shell, :inline => "apt-get update && apt-get install erlang -q -y"
