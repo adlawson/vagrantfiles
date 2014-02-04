@@ -6,8 +6,11 @@ Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Pr
 from [Vagrantbox.es][vagrantboxes] and simply uses `apt-get` to install dependencies.
 
 
- - [**Node.js**][vagrantfile-nodejs] (Latest stable from `ppa:chris-lea/node.js`)
- - [**PHP**][vagrantfile-php] (Latest stable from `ppa:ondrej/php5` *plus* [Composer][composer])
+ - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github)
+ - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions])
+ - [**Haskell**][vagrantfile-haskell] (Haskell 2010 with latest stable GHC)
+ - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
+ - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] *plus* [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
  - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
 
@@ -17,10 +20,10 @@ Alternatively, you can use NFS by replacing the `synced_folder` line with this:
 
 ```ruby
 # Shared folders
-config.vm.synced_folder '.', '/srv', :nfs => true
+config.vm.synced_folder ".", "/srv", :nfs => true
 
 # Network
-config.vm.network :private_network, ip: '33.33.33.101'
+config.vm.network :private_network, ip: "33.33.33.101"
 ```
 
 
@@ -35,17 +38,21 @@ Other dependencies installed by default on every instance are:
 
 ### License ###
 The content of this library is released under the **MIT License** by **Andrew Lawson**.<br/>
-You can find a copy of this license at http://www.opensource.org/licenses/mit or in [`LICENSE`][license]
+You can find a copy of this license in [`LICENSE`][license] or at http://www.opensource.org/licenses/mit.
 
 
 <!-- Links -->
-[vagrant]:            http://vagrantup.com
-[vagrantboxes]:       http://vagrantbox.es
-[license]:            https://github.com/adlawson/vagrantfiles/blob/master/LICENSE
-[composer]:           http://getcomposer.org
-[vagrantfile-nodejs]: https://github.com/adlawson/vagrantfiles/blob/master/nodejs/Vagrantfile
-[vagrantfile-php]:    https://github.com/adlawson/vagrantfiles/blob/master/php/Vagrantfile
-[vagrantfile-python]: https://github.com/adlawson/vagrantfiles/blob/master/python/Vagrantfile
-[vagrantfile-ruby]:   https://github.com/adlawson/vagrantfiles/blob/master/ruby/Vagrantfile
-[launchpad-nodejs]:   https://launchpad.net/~chris-lea/+archive/node.js
-[launchpad-php]:      https://launchpad.net/~ondrej/+archive/php5
+[vagrant]: http://vagrantup.com
+[vagrantboxes]: http://vagrantbox.es
+[composer]: http://getcomposer.org
+[erl-solutions]: https://www.erlang-solutions.com/downloads/download-erlang-otp
+[launchpad-nodejs]: https://launchpad.net/~chris-lea/+archive/node.js
+[launchpad-php]: https://launchpad.net/~ondrej/+archive/php5
+[license]: /LICENSE
+[vagrantfile-elixir]: /elixir/Vagrantfile
+[vagrantfile-erlang]: /erlang/Vagrantfile
+[vagrantfile-haskell]: /haskell/Vagrantfile
+[vagrantfile-nodejs]: /nodejs/Vagrantfile
+[vagrantfile-php]: /php/Vagrantfile
+[vagrantfile-python]: /python/Vagrantfile
+[vagrantfile-ruby]: /ruby/Vagrantfile
