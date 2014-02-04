@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Box
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  # Shared folders
+  config.vm.synced_folder ".", "/srv"
+
+  # Setup
+  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
+  config.vm.provision :shell, :inline => "wget http://download.racket-lang.org/installers/recent/racket-5.93-x86_64-linux-ubuntu-quantal.sh"
+  config.vm.provision :shell, :inline => "bash racket-5.93-x86_64-linux-ubuntu-quantal.sh"
+  config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/racket/bin' > .bash_profile"
+
+  # Done
+  config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
+
+end

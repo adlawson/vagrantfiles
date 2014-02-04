@@ -14,6 +14,7 @@ from [Vagrantbox.es][vagrantboxes] and simply uses `apt-get` to install dependen
  - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
  - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] *plus* [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
+ - [**Racket**][vagrantfile-racket] (Version 5.93)
  - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
 
 
@@ -61,4 +62,5 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [vagrantfile-nodejs]: /nodejs/Vagrantfile
 [vagrantfile-php]: /php/Vagrantfile
 [vagrantfile-python]: /python/Vagrantfile
+[vagrantfile-racket]: /racket/Vagrantfile
 [vagrantfile-ruby]: /ruby/Vagrantfile
