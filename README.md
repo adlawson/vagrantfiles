@@ -3,9 +3,10 @@
 
 Just a cheeky repository with some base `Vagrantfiles` I use in a number of projects.
 Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Precise Pagolin)**
-from [Vagrantbox.es][vagrantboxes] and simply uses `apt-get` to install dependencies.
+from [Vagrantbox.es][vagrantboxes].
 
 
+ - [**Clojure**][vagrantfile-clojure] (Leiningen version 2.3.4 with OpenJDK 7)
  - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github)
  - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
@@ -54,6 +55,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [launchpad-nodejs]: https://launchpad.net/~chris-lea/+archive/node.js
 [launchpad-php]: https://launchpad.net/~ondrej/+archive/php5
 [license]: /LICENSE
+[vagrantfile-clojure]: /clojure/Vagrantfile
 [vagrantfile-elixir]: /elixir/Vagrantfile
 [vagrantfile-erlang]: /erlang/Vagrantfile
 [vagrantfile-go]: /go/Vagrantfile
