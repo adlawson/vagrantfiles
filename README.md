@@ -40,6 +40,24 @@ Other dependencies installed by default on every instance are:
  - Cowsay *(important)*
 
 
+### Usage
+Typically you won't want to download *all* configuration files, so rather than
+cloning this project with git, a simple cURL download will do.
+```bash
+$ # Download the file for the language you want to use (nodejs in this example)
+$ curl -O https://raw.github.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
+
+$ # Create and SSH into the VM
+$ vagrant up
+$ vagrant ssh
+...
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+$ # Move into the mounted project directory
+$ cd /srv
+```
+
+
 ### License ###
 The content of this library is released under the **MIT License** by **Andrew Lawson**.<br/>
 You can find a copy of this license in [`LICENSE`][license] or at http://www.opensource.org/licenses/mit.
