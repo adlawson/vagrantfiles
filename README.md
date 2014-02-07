@@ -6,7 +6,7 @@ Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Pr
 from [Vagrantbox.es][vagrantboxes].
 
 
- - [**Clojure**][vagrantfile-clojure] (Leiningen version 2.3.4 with OpenJDK 7)
+ - [**Clojure**][vagrantfile-clojure] (Latest stable Leiningen with OpenJDK 7)
  - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github)
  - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
