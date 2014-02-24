@@ -5,6 +5,8 @@ Just a cheeky repository with some base `Vagrantfiles` I use in a number of proj
 Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Precise Pagolin)**
 from [Vagrantbox.es][vagrantboxes].
 
+##### `curl -O https://raw.github.com/adlawson/vagrantfiles/master/{LANG}/Vagrantfile`
+
 
  - [**Clojure**][vagrantfile-clojure] (Latest stable [Leiningen][leiningen] with OpenJDK 7)
  - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github with [Rebar][rebar])
