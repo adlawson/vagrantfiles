@@ -7,13 +7,13 @@ from [Vagrantbox.es][vagrantboxes].
 
 
  - [**Clojure**][vagrantfile-clojure] (Latest stable Leiningen with OpenJDK 7)
- - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github)
- - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions])
+ - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github with [Rebar][rebar])
+ - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions] with [Rebar][rebar])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
  - [**Haskell**][vagrantfile-haskell] (Haskell 2010 with latest stable GHC)
  - [**Julia**][vagrantfile-julia] (Latest stable from [`ppa:staticfloat/juliareleases`][launchpad-julia])
  - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
- - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] *plus* [Composer][composer])
+ - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] with [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
  - [**Racket**][vagrantfile-racket] (Version 5.93)
  - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
@@ -73,6 +73,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [launchpad-nodejs]: https://launchpad.net/~chris-lea/+archive/node.js
 [launchpad-php]: https://launchpad.net/~ondrej/+archive/php5
 [license]: /LICENSE
+[rebar]: https://github.com/rebar/rebar
 [vagrantfile-clojure]: /clojure/Vagrantfile
 [vagrantfile-elixir]: /elixir/Vagrantfile
 [vagrantfile-erlang]: /erlang/Vagrantfile

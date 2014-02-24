@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :inline => "wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb"
   config.vm.provision :shell, :inline => "dpkg -i erlang-solutions_1.0_all.deb"
   config.vm.provision :shell, :inline => "apt-get update && apt-get install erlang -q -y"
+  config.vm.provision :shell, :inline => "git clone git://github.com/rebar/rebar.git && cd rebar && make"
+  config.vm.provision :shell, :inline => "ln -s /home/vagrant/rebar/rebar /usr/local/bin/rebar"
 
   # Done
   config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
