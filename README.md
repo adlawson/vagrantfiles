@@ -6,7 +6,7 @@ Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Pr
 from [Vagrantbox.es][vagrantboxes].
 
 
- - [**Clojure**][vagrantfile-clojure] (Latest stable Leiningen with OpenJDK 7)
+ - [**Clojure**][vagrantfile-clojure] (Latest stable [Leiningen][leiningen] with OpenJDK 7)
  - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github with [Rebar][rebar])
  - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions] with [Rebar][rebar])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
@@ -69,6 +69,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [composer]: http://getcomposer.org
 [erl-solutions]: https://www.erlang-solutions.com/downloads/download-erlang-otp
 [googlecode-go]: https://code.google.com/p/go/downloads/list
+[leiningen]: https://github.com/technomancy/leiningen
 [launchpad-julia]: https://launchpad.net/~staticfloat/+archive/juliareleases
 [launchpad-nodejs]: https://launchpad.net/~chris-lea/+archive/node.js
 [launchpad-php]: https://launchpad.net/~ondrej/+archive/php5
