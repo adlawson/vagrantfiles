@@ -13,6 +13,7 @@ from [Vagrantbox.es][vagrantboxes].
  - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions] with [Rebar][rebar])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
  - [**Haskell**][vagrantfile-haskell] (Haskell 2010 with latest stable GHC)
+ - [**HHVM**][vagrantfile-hhvm] (Latest stable from [`ppa:mapnik/boost`][wiki-hhvm] with [Composer][composer])
  - [**Julia**][vagrantfile-julia] (Latest stable from [`ppa:staticfloat/juliareleases`][launchpad-julia])
  - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
  - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] with [Composer][composer])
@@ -75,6 +76,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [launchpad-julia]: https://launchpad.net/~staticfloat/+archive/juliareleases
 [launchpad-nodejs]: https://launchpad.net/~chris-lea/+archive/node.js
 [launchpad-php]: https://launchpad.net/~ondrej/+archive/php5
+[wiki-hhvm]: https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04
 [license]: /LICENSE
 [rebar]: https://github.com/rebar/rebar
 [vagrantfile-clojure]: /clojure/Vagrantfile
@@ -82,6 +84,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [vagrantfile-erlang]: /erlang/Vagrantfile
 [vagrantfile-go]: /go/Vagrantfile
 [vagrantfile-haskell]: /haskell/Vagrantfile
+[vagrantfile-hhvm]: /hhvm/Vagrantfile
 [vagrantfile-julia]: /julia/Vagrantfile
 [vagrantfile-nodejs]: /nodejs/Vagrantfile
 [vagrantfile-php]: /php/Vagrantfile
