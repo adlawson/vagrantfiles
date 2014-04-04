@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Box
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  # Shared folders
+  config.vm.synced_folder ".", "/srv"
+
+  # Setup
+  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
+  config.vm.provision :shell, :inline => "add-apt-repository ppa:mapnik/boost"
+  config.vm.provision :shell, :inline => "wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -"
+  config.vm.provision :shell, :inline => "echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list"
+  config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y hhvm"
+  config.vm.provision :shell, :inline => "curl -s https://getcomposer.org/installer | php"
+  config.vm.provision :shell, :inline => "mv ./composer.phar /usr/local/bin/composer"
+
+  # Done
+  config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
+
+end
