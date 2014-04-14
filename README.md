@@ -20,6 +20,7 @@ from [Vagrantbox.es][vagrantboxes].
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
  - [**Racket**][vagrantfile-racket] (Version 5.93)
  - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
+ - [**Scheme**][vagrantfile-scheme] (Latest stable mit-scheme from Ubuntu repositories)
 
 
 [Vagrant][vagrant] will mount your directory to `/srv` via your provider's shared folder feature.
@@ -91,3 +92,4 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [vagrantfile-python]: /python/Vagrantfile
 [vagrantfile-racket]: /racket/Vagrantfile
 [vagrantfile-ruby]: /ruby/Vagrantfile
+[vagrantfile-scheme]: /scheme/Vagrantfile
