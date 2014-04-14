@@ -9,7 +9,7 @@ from [Vagrantbox.es][vagrantboxes].
 
 
  - [**Clojure**][vagrantfile-clojure] (Latest stable [Leiningen][leiningen] with OpenJDK 7)
- - [**Elixir**][vagrantfile-elixir] (Version 0.12.2 from github with [Rebar][rebar])
+ - [**Elixir**][vagrantfile-elixir] (Version 0.12.5 from github with [Rebar][rebar])
  - [**Erlang**][vagrantfile-erlang] (Latest stable from [`erlang-solutions.com`][erl-solutions] with [Rebar][rebar])
  - [**Go**][vagrantfile-go] (Version 1.2 via [Google Code][googlecode-go])
  - [**Haskell**][vagrantfile-haskell] (Haskell 2010 with latest stable GHC)
