@@ -15,6 +15,7 @@ from [Vagrantbox.es][vagrantboxes].
  - [**Haskell**][vagrantfile-haskell] (Haskell 2010 with latest stable GHC)
  - [**HHVM**][vagrantfile-hhvm] (Latest stable from [`ppa:mapnik/boost`][wiki-hhvm] with [Composer][composer])
  - [**Julia**][vagrantfile-julia] (Latest stable from [`ppa:staticfloat/juliareleases`][launchpad-julia])
+ - [**Lua**][vagrantfile-lua] (Latest stable 5.2.x from Ubuntu repositories)
  - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
  - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] with [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
@@ -87,6 +88,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [vagrantfile-haskell]: /haskell/Vagrantfile
 [vagrantfile-hhvm]: /hhvm/Vagrantfile
 [vagrantfile-julia]: /julia/Vagrantfile
+[vagrantfile-lua]: /lua/Vagrantfile
 [vagrantfile-nodejs]: /nodejs/Vagrantfile
 [vagrantfile-php]: /php/Vagrantfile
 [vagrantfile-python]: /python/Vagrantfile
