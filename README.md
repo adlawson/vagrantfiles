@@ -17,6 +17,7 @@ from [Vagrantbox.es][vagrantboxes].
  - [**Julia**][vagrantfile-julia] (Latest stable from [`ppa:staticfloat/juliareleases`][launchpad-julia])
  - [**Lua**][vagrantfile-lua] (Latest stable 5.2.x from Ubuntu repositories)
  - [**Node.js**][vagrantfile-nodejs] (Latest stable from [`ppa:chris-lea/node.js`][launchpad-nodejs])
+ - [**Perl**][vagrantfile-perl] (Latest stable Perl 5 from Ubuntu repositories)
  - [**PHP**][vagrantfile-php] (Latest stable from [`ppa:ondrej/php5`][launchpad-php] with [Composer][composer])
  - [**Python**][vagrantfile-python] (Latest stable from apt repository)
  - [**Racket**][vagrantfile-racket] (Version 5.93)
@@ -90,6 +91,7 @@ You can find a copy of this license in [`LICENSE`][license] or at http://www.ope
 [vagrantfile-julia]: /julia/Vagrantfile
 [vagrantfile-lua]: /lua/Vagrantfile
 [vagrantfile-nodejs]: /nodejs/Vagrantfile
+[vagrantfile-perl]: /perl/Vagrantfile
 [vagrantfile-php]: /php/Vagrantfile
 [vagrantfile-python]: /python/Vagrantfile
 [vagrantfile-racket]: /racket/Vagrantfile
