@@ -53,6 +53,14 @@ need a Static IP for this to work correctly.
 ```ruby
 # Shared folders
 config.vm.synced_folder ".", "/srv", :nfs => true
+
+### Performance
+It may be important to you to limit the performance hit to your local machine, or ensure enough memory is available to your provider. For example, the configuration below will limit the VM to using no more than 50% of your CPU and allocate up to 2GB of memory. Note: This example uses VirtualBox, but if you use a different provider such as VMWare, then this will be ignored safely.
+```
+  config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+    v.customize ["modifyvm", :id, "--memory", 2048]
+  end
 ```
 
 ## License
