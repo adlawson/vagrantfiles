@@ -1,12 +1,8 @@
 # Vagrantfiles #
 
-
 Just a cheeky repository with some base `Vagrantfiles` I use in a number of projects.
 Each setup is based on an *almost* vanilla install of **Ubuntu 12.04 LTS x64 (Precise Pagolin)**
 from [Vagrantbox.es][vagrantboxes].
-
-##### `curl -O https://raw.github.com/adlawson/vagrantfiles/master/{LANG}/Vagrantfile`
-
 
  - [**Clojure**][vagrantfile-clojure] (Latest stable [Leiningen][leiningen] with OpenJDK 7)
  - [**Elixir**][vagrantfile-elixir] (Version 0.12.5 from github with [Rebar][rebar])
@@ -24,7 +20,6 @@ from [Vagrantbox.es][vagrantboxes].
  - [**Ruby**][vagrantfile-ruby] (Version 2.0.0 via `RVM`)
  - [**Scheme**][vagrantfile-scheme] (Latest stable mit-scheme from Ubuntu repositories)
 
-
 [Vagrant][vagrant] will mount your directory to `/srv` via your provider's shared folder feature.
 Alternatively, you can use NFS by replacing the `synced_folder` line with this:
 
@@ -36,7 +31,6 @@ config.vm.synced_folder ".", "/srv", :nfs => true
 config.vm.network :private_network, ip: "33.33.33.101"
 ```
 
-
 Other dependencies installed by default on every instance are:
  - cURL
  - Python Software Properties
@@ -45,13 +39,12 @@ Other dependencies installed by default on every instance are:
  - Git
  - Cowsay *(important)*
 
-
 ### Usage
 Typically you won't want to download *all* configuration files, so rather than
 cloning this project with git, a simple cURL download will do.
 ```bash
 $ # Download the file for the language you want to use (nodejs in this example)
-$ curl -O https://raw.github.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
+$ curl -O https://raw.githubusercontent.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
 
 $ # Create and SSH into the VM
 $ vagrant up
