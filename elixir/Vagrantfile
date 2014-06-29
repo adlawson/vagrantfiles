@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
 
   # Elixir version
-  version = "v0.12.5"
+  version = "v0.14.0"
 
   # Box
   config.vm.box = "precise64"
