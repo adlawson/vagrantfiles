@@ -13,8 +13,8 @@ Vagrant.configure("2") do |config|
   # Setup
   config.vm.provision :shell, :inline => "apt-get update --fix-missing"
   config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
-  config.vm.provision :shell, :inline => "wget https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz"
-  config.vm.provision :shell, :inline => "tar -C /usr/local -xzf go1.2.linux-amd64.tar.gz"
+  config.vm.provision :shell, :inline => "wget http://golang.org/dl/go1.3.linux-amd64.tar.gz"
+  config.vm.provision :shell, :inline => "tar -C /usr/local -xzf go1.3.linux-amd64.tar.gz"
   config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/local/go/bin' > .bash_profile"
   config.vm.provision :shell, :inline => "echo 'export GOPATH=/srv' >> .bash_profile"
 
