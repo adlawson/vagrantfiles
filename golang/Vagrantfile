@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    version = "1.3.3"
+    hostname = "golang.box"
+    locale = "en_GB.UTF.8"
+
+    # Box
+    config.vm.box = "trusty64"
+    config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
+
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
+
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    config.vm.provision :shell, :inline => "echo 'fetching go#{version}.linux-amd64' && wget -q http://golang.org/dl/go#{version}.linux-amd64.tar.gz"
+    config.vm.provision :shell, :inline => "tar -C /usr/local -xzf go#{version}.linux-amd64.tar.gz"
+    config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/local/go/bin' > .bash_profile"
+    config.vm.provision :shell, :inline => "echo 'export GOPATH=/srv' >> .bash_profile"
+    config.vm.provision :shell, :inline => "go get github.com/tools/godep"
+
+end
