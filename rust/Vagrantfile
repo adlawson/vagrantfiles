@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    hostname = "rust.box"
+    locale = "en_GB.UTF.8"
+
+    # Box
+    config.vm.box = "trusty64"
+    config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
+
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
+
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    config.vm.provision :shell, :inline => "curl -s https://static.rust-lang.org/rustup.sh | sudo sh"
+
+end
