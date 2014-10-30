@@ -3,21 +3,26 @@
 
 Vagrant.configure("2") do |config|
 
-  # Box
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    version = "5.93"
+    hostname = "racket.box"
+    locale = "en_GB.UTF.8"
 
-  # Shared folders
-  config.vm.synced_folder ".", "/srv"
+    # Box
+    config.vm.box = "trusty64"
+    config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
-  # Setup
-  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
-  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
-  config.vm.provision :shell, :inline => "wget http://download.racket-lang.org/installers/recent/racket-5.93-x86_64-linux-ubuntu-quantal.sh"
-  config.vm.provision :shell, :inline => "bash racket-5.93-x86_64-linux-ubuntu-quantal.sh"
-  config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/racket/bin' > .bash_profile"
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
 
-  # Done
-  config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    config.vm.provision :shell, :inline => "echo 'fetching racket-#{version}-x86_64' && wget -q http://download.racket-lang.org/installers/recent/racket-#{version}-x86_64-linux-ubuntu-quantal.sh"
+    config.vm.provision :shell, :inline => "bash racket-#{version}-x86_64-linux-ubuntu-quantal.sh"
+    config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/racket/bin' > .bash_profile"
 
 end
