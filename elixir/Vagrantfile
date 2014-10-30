@@ -3,29 +3,31 @@
 
 Vagrant.configure("2") do |config|
 
-  # Elixir version
-  version = "v0.15.1"
+    hostname = "elixir.box"
+    locale = "en_GB.UTF.8"
 
-  # Box
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    # Box
+    config.vm.box = "trusty64"
+    config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
-  # Shared folders
-  config.vm.synced_folder ".", "/srv"
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
 
-  # Setup
-  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
-  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl"
-  config.vm.provision :shell, :inline => "wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb"
-  config.vm.provision :shell, :inline => "dpkg -i erlang-solutions_1.0_all.deb"
-  config.vm.provision :shell, :inline => "apt-get update && apt-get install erlang -q -y"
-  config.vm.provision :shell, :inline => "git clone git://github.com/elixir-lang/elixir.git"
-  config.vm.provision :shell, :inline => "git clone git://github.com/rebar/rebar.git && cd rebar && make"
-  config.vm.provision :shell, :inline => "cd /home/vagrant/elixir && git checkout #{version}"
-  config.vm.provision :shell, :inline => "cd /home/vagrant/elixir && make && make install"
-  config.vm.provision :shell, :inline => "ln -s /home/vagrant/rebar/rebar /usr/local/bin/rebar"
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
 
-  # Done
-  config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
+    # Lang
+    config.vm.provision :shell, :inline => "echo 'fetching erlang' && wget -q http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb"
+    config.vm.provision :shell, :inline => "dpkg -i erlang-solutions_1.0_all.deb"
+    # config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y erlang"
+    config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y elixir"
+    # config.vm.provision :shell, :inline => "git clone git://github.com/elixir-lang/elixir.git"
+    # config.vm.provision :shell, :inline => "git clone git://github.com/rebar/rebar.git && cd rebar && make"
+    # config.vm.provision :shell, :inline => "cd /home/vagrant/elixir && git checkout #{version}"
+    # config.vm.provision :shell, :inline => "cd /home/vagrant/elixir && make && make install"
+    # config.vm.provision :shell, :inline => "ln -s /home/vagrant/rebar/rebar /usr/local/bin/rebar"
 
 end
