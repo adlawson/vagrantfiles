@@ -3,22 +3,26 @@
 
 Vagrant.configure("2") do |config|
 
-  # Box
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    hostname = "clojure.box"
+    locale = "en_GB.UTF.8"
 
-  # Shared folders
-  config.vm.synced_folder ".", "/srv"
+    # Box
+    config.vm.box = "trusty64"
+    config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
-  # Setup
-  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
-  config.vm.provision :shell, :inline => "apt-get install -q -y cowsay python-software-properties python g++ make git curl openjdk-7-jre-headless"
-  config.vm.provision :shell, :inline => "wget https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz"
-  config.vm.provision :shell, :inline => "wget https://raw.github.com/technomancy/leiningen/stable/bin/lein"
-  config.vm.provision :shell, :inline => "mv lein /usr/local/bin/lein && chmod +x /usr/local/bin/lein"
-  config.vm.provision :shell, :inline => "/usr/local/bin/lein version"
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
 
-  # Done
-  config.vm.provision :shell, :inline => "cowsay \"Your development environment is ready!\""
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    config.vm.provision :shell, :inline => "apt-get install -q -y default-jre"
+    config.vm.provision :shell, :inline => "echo 'fetching leiningen/stable' && wget https://raw.github.com/technomancy/leiningen/stable/bin/lein"
+    config.vm.provision :shell, :inline => "mv lein /usr/local/bin/lein && chmod +x /usr/local/bin/lein"
+    config.vm.provision :shell, :inline => "/usr/local/bin/lein version"
 
 end
