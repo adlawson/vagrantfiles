@@ -28,6 +28,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :inline => "dpkg -i scala-#{version_scala}.deb"
     config.vm.provision :shell, :inline => "dpkg -i sbt-#{version_sbt}.deb"
     config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y scala sbt"
-    config.vm.provision :shell, :inline => "sed -i 's/#-mem.*/-mem 256/' /usr/share/sbt-launcher-packaging/conf/sbtopts"
+    config.vm.provision :shell, :inline => "sed -i 's/#-mem.*/-mem 512/' /usr/share/sbt-launcher-packaging/conf/sbtopts"
 
 end
