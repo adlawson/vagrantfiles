@@ -20,7 +20,7 @@ cd /srv
 | [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `default-jre` |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
-| [golang][raw-golang]   | [`Godep`][godep]         | `1.3.3` from [`code.google.com`][src-golang]                |               |
+| [golang][raw-golang]   | [`Godep`][godep]         | `1.3.3` from [`golang.org`][src-golang]                     |               |
 | [haskell][raw-haskell] |                          | `2010`                                                      |               |
 | [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |               |
 | [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |               |
@@ -69,7 +69,7 @@ The content of this library is released under the **MIT License** by
 [ppa-nodejs]:  https://launchpad.net/~chris-lea/+archive/node.js
 [ppa-php]:     https://launchpad.net/~ondrej/+archive/php5-5.6
 [src-erlang]:  https://www.erlang-solutions.com/downloads/download-erlang-otp
-[src-golang]:  https://code.google.com/p/go/downloads/list
+[src-golang]:  https://golang.org/dl/
 
 [cargo]:       http://crates.io
 [composer]:    https://getcomposer.org
