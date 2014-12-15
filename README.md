@@ -20,7 +20,7 @@ cd /srv
 | [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `default-jre` |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
-| [golang][raw-golang]   | [`Godep`][godep]         | `1.3.3` from [`golang.org`][src-golang]                     |               |
+| [golang][raw-golang]   | [`Godep`][godep]         | `1.4` from [`golang.org`][src-golang]                     |               |
 | [haskell][raw-haskell] |                          | `2010`                                                      |               |
 | [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |               |
 | [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |               |
