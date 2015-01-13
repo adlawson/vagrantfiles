@@ -6,12 +6,14 @@ Vagrant.configure("2") do |config|
     version = "1.4"
     hostname = "golang.box"
     locale = "en_GB.UTF.8"
+    workspace = "/usr/workspace"
+    package = "dev"
 
     # Box
     config.vm.box = "ubuntu/trusty64"
 
     # Shared folders
-    config.vm.synced_folder ".", "/srv"
+    config.vm.synced_folder ".", "#{workspace}/src/#{package}"
 
     # Setup
     config.vm.provision :shell, :inline => "touch .hushlogin"
@@ -20,10 +22,12 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
 
     # Lang
+    config.vm.provision :shell, :inline => "mkdir -p #{workspace}/bin #{workspace}/pkg"
+    config.vm.provision :shell, :inline => "rmdir /srv && ln -s #{workspace}/src/#{package} /srv"
     config.vm.provision :shell, :inline => "echo 'fetching go#{version}.linux-amd64' && wget -q https://storage.googleapis.com/golang/go#{version}.linux-amd64.tar.gz"
     config.vm.provision :shell, :inline => "tar -C /usr/local -xzf go#{version}.linux-amd64.tar.gz"
-    config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/local/go/bin' > .bash_profile"
-    config.vm.provision :shell, :inline => "echo 'export GOPATH=/srv' >> .bash_profile"
-    config.vm.provision :shell, :inline => "go get github.com/tools/godep"
+    config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/local/go/bin:#{workspace}/bin' > .bash_profile"
+    config.vm.provision :shell, :inline => "echo 'export GOPATH=#{workspace}' >> .bash_profile"
+    config.vm.provision :shell, :inline => "source .bash_profile && go get github.com/tools/godep"
 
 end
