@@ -20,9 +20,10 @@ cd /srv
 | [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `default-jre` |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
-| [golang][raw-golang]   | [`Godep`][godep]         | `1.4` from [`golang.org`][src-golang]                     |               |
+| [golang][raw-golang]   | [`Godep`][godep]         | `1.4` from [`golang.org`][src-golang]                       |               |
 | [haskell][raw-haskell] |                          | `2010`                                                      |               |
 | [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |               |
+| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.0.1` from [`iojs.org`][src-iojs]                         |               |
 | [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |               |
 | [lua][raw-lua]         |                          | `5.2.*`                                                     |               |
 | [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |               |
@@ -70,6 +71,7 @@ The content of this library is released under the **MIT License** by
 [ppa-php]:     https://launchpad.net/~ondrej/+archive/php5-5.6
 [src-erlang]:  https://www.erlang-solutions.com/downloads/download-erlang-otp
 [src-golang]:  https://golang.org/dl/
+[src-iojs]:    https://iojs.org/dist
 
 [cargo]:       http://crates.io
 [composer]:    https://getcomposer.org
@@ -89,6 +91,7 @@ The content of this library is released under the **MIT License** by
 [raw-golang]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/golang/Vagrantfile
 [raw-haskell]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/haskell/Vagrantfile
 [raw-hhvm]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/hhvm/Vagrantfile
+[raw-iojs]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/iojs/Vagrantfile
 [raw-julia]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/julia/Vagrantfile
 [raw-lua]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/lua/Vagrantfile
 [raw-nodejs]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
