@@ -24,4 +24,10 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :inline => "mv lein /usr/local/bin/lein && chmod +x /usr/local/bin/lein"
     config.vm.provision :shell, :inline => "/usr/local/bin/lein version"
 
+    # Virtualbox
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
+        v.cpus = 2
+    end
+
 end
