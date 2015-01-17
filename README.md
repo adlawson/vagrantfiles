@@ -33,7 +33,7 @@ cd /srv
 | [racket][raw-racket]   |                          | `5.93`                                                      |               |
 | [ruby][raw-ruby]       | [`Gem`][gem]             | `2.0.0`                                                     | [`RVM`][rvm]  |
 | [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |               |
-| [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.2`                                                    | `default-jre` |
+| [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.4`                                                    | `default-jre` |
 | [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |               |
 
 ## Configuration
