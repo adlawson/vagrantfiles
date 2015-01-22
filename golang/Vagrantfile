@@ -23,12 +23,12 @@ Vagrant.configure("2") do |config|
 
     # Lang
     config.vm.provision :shell, :inline => "mkdir -p #{workspace}/bin #{workspace}/pkg"
-    config.vm.provision :shell, :inline => "chown vagrant:vagrant #{workspace}/bin #{workspace}/pkg #{workspace}/src"
     config.vm.provision :shell, :inline => "rmdir /srv && ln -s #{workspace}/src/#{package} /srv"
     config.vm.provision :shell, :inline => "echo 'fetching go#{version}.linux-amd64' && wget -q https://storage.googleapis.com/golang/go#{version}.linux-amd64.tar.gz"
     config.vm.provision :shell, :inline => "tar -C /usr/local -xzf go#{version}.linux-amd64.tar.gz"
     config.vm.provision :shell, :inline => "echo 'export PATH=$PATH:/usr/local/go/bin:#{workspace}/bin' > .bash_profile"
     config.vm.provision :shell, :inline => "echo 'export GOPATH=#{workspace}' >> .bash_profile"
     config.vm.provision :shell, :inline => "source .bash_profile && go get github.com/tools/godep"
+    config.vm.provision :shell, :inline => "chown -R vagrant:vagrant #{workspace}"
 
 end
