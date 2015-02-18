@@ -31,7 +31,7 @@ cd /srv
 | [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               |              |
 | [python][raw-python]   | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |              |
 | [racket][raw-racket]   |                          | `5.93`                                                      |              |
-| [ruby][raw-ruby]       | [`Gem`][gem]             | `2.0.0`                                                     | [`RVM`][rvm] |
+| [ruby][raw-ruby]       | [`Gem`][gem]             | `2.2.0`                                                     | [`RVM`][rvm] |
 | [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |              |
 | [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.4`                                                    | `default-jre` |
 | [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |              |
