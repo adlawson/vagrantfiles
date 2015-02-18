@@ -15,26 +15,26 @@ cd /srv
 ```
 
 ## Available languages
-| Language               | Tooling                  | Version                                                     | Extras        |
-| ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------- |
-| [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `default-jre` |
-| [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
-| [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |               |
-| [golang][raw-golang]   | [`Godep`][godep]         | `1.4.1` from [`golang.org`][src-golang]                     |               |
-| [haskell][raw-haskell] |                          | `2010`                                                      |               |
-| [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |               |
-| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.0.3` from [`iojs.org`][src-iojs]                         |               |
-| [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |               |
-| [lua][raw-lua]         |                          | `5.2.*`                                                     |               |
-| [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |               |
-| [perl][raw-perl]       |                          | `5.*`                                                       |               |
-| [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               |               |
-| [python][raw-python]   | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |               |
-| [racket][raw-racket]   |                          | `5.93`                                                      |               |
-| [ruby][raw-ruby]       | [`Gem`][gem]             | `2.0.0`                                                     | [`RVM`][rvm]  |
-| [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |               |
+| Language               | Tooling                  | Version                                                     | Extras       |
+| ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------ |
+| [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `java8`      |
+| [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
+| [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
+| [golang][raw-golang]   | [`Godep`][godep]         | `1.4.1` from [`golang.org`][src-golang]                     |              |
+| [haskell][raw-haskell] |                          | `2010`                                                      |              |
+| [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |              |
+| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.0.3` from [`iojs.org`][src-iojs]                         |              |
+| [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |              |
+| [lua][raw-lua]         |                          | `5.2.*`                                                     |              |
+| [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |              |
+| [perl][raw-perl]       |                          | `5.*`                                                       |              |
+| [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               |              |
+| [python][raw-python]   | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |              |
+| [racket][raw-racket]   |                          | `5.93`                                                      |              |
+| [ruby][raw-ruby]       | [`Gem`][gem]             | `2.0.0`                                                     | [`RVM`][rvm] |
+| [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |              |
 | [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.4`                                                    | `default-jre` |
-| [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |               |
+| [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |              |
 
 ## Configuration
 
