@@ -23,7 +23,7 @@ cd /srv
 | [golang][raw-golang]   | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |              |
 | [haskell][raw-haskell] |                          | `2010`                                                      |              |
 | [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |              |
-| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.0.3` from [`iojs.org`][src-iojs]                         |              |
+| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.2.0` from [`iojs.org`][src-iojs]                         |              |
 | [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |              |
 | [lua][raw-lua]         |                          | `5.2.*`                                                     |              |
 | [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |              |
