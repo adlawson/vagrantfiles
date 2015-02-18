@@ -17,7 +17,7 @@ cd /srv
 ## Available languages
 | Language               | Tooling                  | Version                                                     | Extras       |
 | ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------ |
-| [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `java8`      |
+| [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`     |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [golang][raw-golang]   | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |              |
@@ -33,7 +33,7 @@ cd /srv
 | [racket][raw-racket]   |                          | `5.93`                                                      |              |
 | [ruby][raw-ruby]       | [`Gem`][gem]             | `2.2.0`                                                     | [`RVM`][rvm] |
 | [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |              |
-| [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.4`                                                    | `default-jre` |
+| [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.5`                                                    | `Java 8`     |
 | [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |              |
 
 ## Configuration
