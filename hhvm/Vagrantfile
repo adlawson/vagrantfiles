@@ -23,7 +23,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :inline => "wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -"
     config.vm.provision :shell, :inline => "echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list"
     config.vm.provision :shell, :inline => "apt-get update && apt-get install -q -y hhvm"
-    config.vm.provision :shell, :inline => "curl -s https://getcomposer.org/installer | php"
-    config.vm.provision :shell, :inline => "mv ./composer.phar /usr/local/bin/composer"
+    config.vm.provision :shell, :inline => "curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
 
 end
