@@ -20,7 +20,8 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
 
     # Lang
+    config.vm.provision :shell, :inline => "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
     config.vm.provision :shell, :inline => "curl -L https://get.rvm.io | bash -s stable"
-    config.vm.provision :shell, :inline => "rvm install #{version} --latest-binary --autolibs=enabled && rvm --fuzzy alias create default #{version}"
+    config.vm.provision :shell, :inline => "rvm install #{version} --autolibs=enabled && rvm --fuzzy alias create default #{version}"
 
 end
