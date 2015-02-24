@@ -18,6 +18,7 @@ cd /srv
 | Language               | Tooling                  | Version                                                     | Extras       |
 | ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------ |
 | [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`     |
+| [csharp][raw-csharp]  |                          | `stable`                                                    |              |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [golang][raw-golang]   | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |              |
@@ -99,6 +100,7 @@ The content of this library is released under the **MIT License** by
 [sbt]:         http://www.scala-sbt.org
 
 [raw-clojure]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/clojure/Vagrantfile
+[raw-csharp]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/csharp/Vagrantfile
 [raw-elixir]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/elixir/Vagrantfile
 [raw-erlang]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/erlang/Vagrantfile
 [raw-golang]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/golang/Vagrantfile
