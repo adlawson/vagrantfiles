@@ -18,7 +18,7 @@ cd /srv
 | Language               | Tooling                  | Version                                                     | Extras       |
 | ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------ |
 | [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`     |
-| [csharp][raw-csharp]  |                          | `stable`                                                    |              |
+| [csharp][raw-csharp]   | [`Mono`][mono]           | `stable`                                                    |              |
 | [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
 | [golang][raw-golang]   | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |              |
@@ -93,6 +93,7 @@ The content of this library is released under the **MIT License** by
 [godep]:       https://github.com/tools/godep
 [leiningen]:   https://github.com/technomancy/leiningen
 [mix]:         http://elixir-lang.org/getting_started/mix_otp/1.html
+[mono]:        http://www.mono-project.com/
 [npm]:         https://www.npmjs.org
 [pip]:         http://pip.readthedocs.org/en/latest
 [rebar]:       https://github.com/rebar/rebar
