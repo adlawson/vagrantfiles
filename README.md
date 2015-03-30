@@ -29,7 +29,7 @@ cd /srv
 | [lua][raw-lua]         |                          | `5.2.*`                                                     |              |
 | [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |              |
 | [perl][raw-perl]       |                          | `5.*`                                                       |              |
-| [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               |              |
+| [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               | [`Xdebug`][xdebug]             |
 | [python][raw-python]   | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |              |
 | [racket][raw-racket]   |                          | `5.93`                                                      |              |
 | [ruby][raw-ruby]       | [`Gem`][gem]             | `2.2.0`                                                     | [`RVM`][rvm] |
@@ -99,6 +99,7 @@ The content of this library is released under the **MIT License** by
 [rebar]:       https://github.com/rebar/rebar
 [rvm]:         https://rvm.io
 [sbt]:         http://www.scala-sbt.org
+[xdebug]:      http://xdebug.org/
 
 [raw-clojure]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/clojure/Vagrantfile
 [raw-csharp]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/csharp/Vagrantfile
