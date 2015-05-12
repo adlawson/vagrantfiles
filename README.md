@@ -15,27 +15,28 @@ cd /srv
 ```
 
 ## Available languages
-| Language               | Tooling                  | Version                                                     | Extras       |
-| ---------------------- | ------------------------ | ----------------------------------------------------------- | ------------ |
-| [clojure][raw-clojure] | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`     |
-| [csharp][raw-csharp]   | [`Mono`][mono]           | `stable`                                                    |              |
-| [elixir][raw-elixir]   | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
-| [erlang][raw-erlang]   | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |              |
-| [golang][raw-golang]   | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |              |
-| [haskell][raw-haskell] |                          | `2010`                                                      |              |
-| [hhvm][raw-hhvm]       | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |              |
-| [iojs][raw-iojs]       | [`NPM`][npm]             | `1.2.0` from [`iojs.org`][src-iojs]                         |              |
-| [julia][raw-julia]     |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |              |
-| [lua][raw-lua]         |                          | `5.2.*`                                                     |              |
-| [nodejs][raw-nodejs]   | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |              |
-| [perl][raw-perl]       |                          | `5.*`                                                       |              |
-| [php][raw-php]         | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               | [`Xdebug`][xdebug]             |
-| [python][raw-python]   | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |              |
-| [racket][raw-racket]   |                          | `5.93`                                                      |              |
-| [ruby][raw-ruby]       | [`Gem`][gem]             | `2.2.0`                                                     | [`RVM`][rvm] |
-| [rust][raw-rust]       | [`Cargo`][cargo]         | `stable`                                                    |              |
-| [scala][raw-scala]     | [`SBT`][sbt]             | `2.11.5`                                                    | `Java 8`     |
-| [scheme][raw-scheme]   |                          | `latest mit-scheme`                                         |              |
+| Language                   | Tooling                  | Version                                                     | Extras             |
+| -------------------------- | ------------------------ | ----------------------------------------------------------- | ------------------ |
+| [brainfuck][raw-brainfuck] | [`bf`][bf]               | `20041219ubuntu5`                                           |                    |
+| [clojure][raw-clojure]     | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`           |
+| [csharp][raw-csharp]       | [`Mono`][mono]           | `stable`                                                    |                    |
+| [elixir][raw-elixir]       | [`Mix`][mix]             | `latest` from [`erlang-solutions.com`][src-erlang]          |                    |
+| [erlang][raw-erlang]       | [`Rebar`][rebar]         | `latest` from [`erlang-solutions.com`][src-erlang]          |                    |
+| [golang][raw-golang]       | [`Godep`][godep]         | `1.4.2` from [`golang.org`][src-golang]                     |                    |
+| [haskell][raw-haskell]     |                          | `2010`                                                      |                    |
+| [hhvm][raw-hhvm]           | [`Composer`][composer]   | `latest` from [`ppa:mapnik/boost`][ppa-hhvm]                |                    |
+| [iojs][raw-iojs]           | [`NPM`][npm]             | `1.2.0` from [`iojs.org`][src-iojs]                         |                    |
+| [julia][raw-julia]         |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |                    |
+| [lua][raw-lua]             |                          | `5.2.*`                                                     |                    |
+| [nodejs][raw-nodejs]       | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |                    |
+| [perl][raw-perl]           |                          | `5.*`                                                       |                    |
+| [php][raw-php]             | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               | [`Xdebug`][xdebug] |
+| [python][raw-python]       | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |                    |
+| [racket][raw-racket]       |                          | `5.93`                                                      |                    |
+| [ruby][raw-ruby]           | [`Gem`][gem]             | `2.2.0`                                                     | [`RVM`][rvm]       |
+| [rust][raw-rust]           | [`Cargo`][cargo]         | `stable`                                                    |                    |
+| [scala][raw-scala]         | [`SBT`][sbt]             | `2.11.5`                                                    | `Java 8`           |
+| [scheme][raw-scheme]       |                          | `latest mit-scheme`                                         |                    |
 
 ## Configuration
 
@@ -87,6 +88,7 @@ The content of this library is released under the **MIT License** by
 [src-golang]:  https://golang.org/dl/
 [src-iojs]:    https://iojs.org/dist
 
+[bf]:          http://pkqs.net/~sbeyer/#bf
 [cargo]:       http://crates.io
 [composer]:    https://getcomposer.org
 [gem]:         https://rubygems.org
@@ -101,22 +103,23 @@ The content of this library is released under the **MIT License** by
 [sbt]:         http://www.scala-sbt.org
 [xdebug]:      http://xdebug.org/
 
-[raw-clojure]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/clojure/Vagrantfile
-[raw-csharp]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/csharp/Vagrantfile
-[raw-elixir]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/elixir/Vagrantfile
-[raw-erlang]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/erlang/Vagrantfile
-[raw-golang]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/golang/Vagrantfile
-[raw-haskell]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/haskell/Vagrantfile
-[raw-hhvm]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/hhvm/Vagrantfile
-[raw-iojs]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/iojs/Vagrantfile
-[raw-julia]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/julia/Vagrantfile
-[raw-lua]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/lua/Vagrantfile
-[raw-nodejs]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
-[raw-perl]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/perl/Vagrantfile
-[raw-php]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/php/Vagrantfile
-[raw-python]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/python/Vagrantfile
-[raw-racket]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/racket/Vagrantfile
-[raw-ruby]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/ruby/Vagrantfile
-[raw-rust]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/rust/Vagrantfile
-[raw-scala]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scala/Vagrantfile
-[raw-scheme]:  https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scheme/Vagrantfile
+[raw-brainfuck]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/brainfuck/Vagrantfile
+[raw-clojure]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/clojure/Vagrantfile
+[raw-csharp]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/csharp/Vagrantfile
+[raw-elixir]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/elixir/Vagrantfile
+[raw-erlang]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/erlang/Vagrantfile
+[raw-golang]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/golang/Vagrantfile
+[raw-haskell]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/haskell/Vagrantfile
+[raw-hhvm]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/hhvm/Vagrantfile
+[raw-iojs]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/iojs/Vagrantfile
+[raw-julia]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/julia/Vagrantfile
+[raw-lua]:       https://raw.githubusercontent.com/adlawson/vagrantfiles/master/lua/Vagrantfile
+[raw-nodejs]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
+[raw-perl]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/perl/Vagrantfile
+[raw-php]:       https://raw.githubusercontent.com/adlawson/vagrantfiles/master/php/Vagrantfile
+[raw-python]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/python/Vagrantfile
+[raw-racket]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/racket/Vagrantfile
+[raw-ruby]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/ruby/Vagrantfile
+[raw-rust]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/rust/Vagrantfile
+[raw-scala]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scala/Vagrantfile
+[raw-scheme]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scheme/Vagrantfile
