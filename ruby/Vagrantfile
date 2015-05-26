@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
     # Setup
     config.vm.provision :shell, :inline => "touch .hushlogin"
-    config.vm.provision :shell, :inline => "hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "hostnamectl set-hostname #{hostname} && locale-gen #{locale}"
     config.vm.provision :shell, :inline => "apt-get update --fix-missing"
     config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
 
