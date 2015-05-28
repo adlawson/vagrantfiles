@@ -38,6 +38,35 @@ cd /srv
 | [scala][raw-scala]         | [`SBT`][sbt]             | `2.11.5`                                                    | `Java 8`           |
 | [scheme][raw-scheme]       |                          | `latest mit-scheme`                                         |                    |
 
+
+## Template
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    hostname = "<your language name here>.box"
+    locale = "en_GB.UTF.8"
+
+    # Box
+    config.vm.box = "ubuntu/trusty64"
+
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
+
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostnamectl set-hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    # Provide additional packages/setup/etc
+    ...
+end
+```
+
 ## Configuration
 
 ### Static IP
