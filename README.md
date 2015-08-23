@@ -29,6 +29,7 @@ cd /srv
 | [julia][raw-julia]         |                          | `latest` from [`ppa:staticfloat/juliareleases`][ppa-julia]  |                    |
 | [lua][raw-lua]             |                          | `5.2.*`                                                     |                    |
 | [nodejs][raw-nodejs]       | [`NPM`][npm]             | `latest` from [`ppa:chris-lea/node.js`][ppa-nodejs]         |                    |
+| [ocaml][raw-ocaml]         |                          | `latest` from [`ppa:asvm/ppa`][ppa-ocaml]                   | [`OPAM`][opam]     |
 | [perl][raw-perl]           |                          | `5.*`                                                       |                    |
 | [php][raw-php]             | [`Composer`][composer]   | `5.6.*` from [`ppa:ondrej/php5-5.6`][ppa-php]               | [`Xdebug`][xdebug] |
 | [python][raw-python]       | [`Pip`][pip]             | `3.4.*` and `2.7.*` (`python3` and `python`)                |                    |
@@ -112,6 +113,7 @@ The content of this library is released under the **MIT License** by
 [ppa-hhvm]:    https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04
 [ppa-julia]:   https://launchpad.net/~staticfloat/+archive/juliareleases
 [ppa-nodejs]:  https://launchpad.net/~chris-lea/+archive/node.js
+[ppa-ocaml]:   https://launchpad.net/~avsm/+archive/ubuntu/ppa
 [ppa-php]:     https://launchpad.net/~ondrej/+archive/php5-5.6
 [src-erlang]:  https://www.erlang-solutions.com/downloads/download-erlang-otp
 [src-golang]:  https://golang.org/dl/
@@ -126,6 +128,7 @@ The content of this library is released under the **MIT License** by
 [mix]:         http://elixir-lang.org/getting_started/mix_otp/1.html
 [mono]:        http://www.mono-project.com/
 [npm]:         https://www.npmjs.org
+[opam]:        https://opam.ocaml.org
 [pip]:         http://pip.readthedocs.org/en/latest
 [rebar]:       https://github.com/rebar/rebar
 [rvm]:         https://rvm.io
@@ -144,6 +147,7 @@ The content of this library is released under the **MIT License** by
 [raw-julia]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/julia/Vagrantfile
 [raw-lua]:       https://raw.githubusercontent.com/adlawson/vagrantfiles/master/lua/Vagrantfile
 [raw-nodejs]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/nodejs/Vagrantfile
+[raw-ocaml]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/ocaml/Vagrantfile
 [raw-perl]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/perl/Vagrantfile
 [raw-php]:       https://raw.githubusercontent.com/adlawson/vagrantfiles/master/php/Vagrantfile
 [raw-python]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/python/Vagrantfile
