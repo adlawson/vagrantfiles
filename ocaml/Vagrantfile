@@ -1,0 +1,34 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    hostname = "ocaml.box"
+    locale = "en_GB.UTF.8"
+
+    # Box
+    config.vm.box = "ubuntu/trusty64"
+
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
+
+    # Setup
+    config.vm.provision :shell, :inline => "touch .hushlogin"
+    config.vm.provision :shell, :inline => "hostnamectl set-hostname #{hostname} && locale-gen #{locale}"
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y g++ make git curl vim"
+
+    # Lang
+    config.vm.provision :shell, :inline => "add-apt-repository ppa:avsm/ppa"
+    config.vm.provision :shell, :inline => "apt-get update"
+    config.vm.provision :shell, :inline => "apt-get install -q -y ocaml ocaml-native-compilers camlp4-extra opam m4"
+    config.vm.provision :shell, :inline => "opam init -a -y && opam update", privileged: false
+    config.vm.provision :shell, :inline => "opam install utop batteries core", privileged: false
+
+    # Virtualbox
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
+        v.cpus = 2
+    end
+
+end
