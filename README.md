@@ -2,7 +2,7 @@
 
 Just a cheeky repository with some base `Vagrantfiles` I use in a number of
 projects. Each setup is based on a vanilla installation of
-[Ubuntu 14.04 LTS (Trusty Tahr)][ubuntu] from [Vagrant Cloud][boxes].
+[Ubuntu 14.04 LTS (Trusty Tahr)][ubuntu] from [Hashicorp Atlas][boxes].
 
 ## How do I use it?
 To download a vagrant box for your project, just run the following. Remember to
