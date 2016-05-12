@@ -2,7 +2,7 @@
 
 Just a cheeky repository with some base `Vagrantfiles` I use in a number of
 projects. Each setup is based on a vanilla installation of
-[Ubuntu 14.04 LTS (Trusty Tahr)][ubuntu] from [Hashicorp Atlas][boxes].
+[Ubuntu 14.04 LTS (Trusty Tahr)][ubuntu] from [HashiCorp Atlas][boxes].
 
 ## How do I use it?
 To download a vagrant box for your project, just run the following. Remember to
@@ -105,7 +105,7 @@ The content of this library is released under the **MIT License** by
 **Andrew Lawson**.<br/> You can find a copy of this license in
 [`LICENSE`][license] or at http://opensource.org/licenses/mit.
 
-[boxes]:       https://vagrantcloud.com
+[boxes]:       https://atlas.hashicorp.com
 [license]:     LICENSE
 [ubuntu]:      http://www.ubuntu.com/server
 [vagrant]:     https://vagrantup.com
