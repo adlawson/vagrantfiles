@@ -1,0 +1,41 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    hostname = "swift.box"
+    locale = "en_GB.UTF.8"
+
+    # Box
+    config.vm.box = "ubuntu/trusty64"
+
+    # Shared folders
+    config.vm.synced_folder ".", "/srv"
+
+    # Lang
+    # Provide additional packages/setup/etc
+    config.vm.provision "shell", inline: <<-SHELL
+     echo "Setting up..."
+     touch .hushlogin
+     hostnamectl set-hostname #{hostname} && locale-gen #{locale}
+     echo "Updating..."
+     apt-get update -f > /dev/null 2>&1
+     echo "Upgrading..."
+     apt-get upgrade -y > /dev/null 2>&1
+     echo "Creating installation directory /opt/swift..."
+     mkdir /opt/swift
+     echo "Changing to /opt/swift..."
+     cd /opt/swift
+     echo "Installing dependencies..."
+     apt-get install clang libicu-dev -y > /dev/null 2>&1
+     echo "Getting Swift..."
+     wget -q -O swift.tar.gz https://swift.org/builds/swift-2.2.1-release/ubuntu1404/swift-2.2.1-RELEASE/swift-2.2.1-RELEASE-ubuntu14.04.tar.gz > /dev/null 2>&1
+     echo "Extracting..."
+     tar xzf swift.tar.gz --strip-components=1 
+     echo "Adding to PATH..."
+     PATH=/opt/swift/usr/bin/:$PATH
+     echo "Cleaning up..."
+     rm swift.tar.gz
+     echo "Installation successful."
+   SHELL
+end
