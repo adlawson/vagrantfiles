@@ -17,6 +17,7 @@ cd /srv
 ## Available languages
 | Language                   | Tooling                  | Version                                                     | Extras             |
 | -------------------------- | ------------------------ | ----------------------------------------------------------- | ------------------ |
+| [Bash][raw-bash]           |                          | `bash-4.4`                                                  |                    |
 | [brainfuck][raw-brainfuck] | [`bf`][bf]               | `20041219ubuntu5`                                           |                    |
 | [clojure][raw-clojure]     | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`           |
 | [csharp][raw-csharp]       | [`Mono`][mono]           | `stable`                                                    |                    |
@@ -135,6 +136,7 @@ The content of this library is released under the **MIT License** by
 [sbt]:         http://www.scala-sbt.org
 [xdebug]:      http://xdebug.org/
 
+[raw-bash]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/bash/Vagrantfile
 [raw-brainfuck]: https://raw.githubusercontent.com/adlawson/vagrantfiles/master/brainfuck/Vagrantfile
 [raw-clojure]:   https://raw.githubusercontent.com/adlawson/vagrantfiles/master/clojure/Vagrantfile
 [raw-csharp]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/csharp/Vagrantfile
