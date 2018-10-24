@@ -17,7 +17,7 @@ cd /srv
 ## Available languages
 | Language                   | Tooling                  | Version                                                     | Extras             |
 | -------------------------- | ------------------------ | ----------------------------------------------------------- | ------------------ |
-| [Bash][raw-bash]           |                          | `bash-4.4`                                                  |                    |
+| [bash][raw-bash]           |                          | `bash-4.4`                                                  |                    |
 | [brainfuck][raw-brainfuck] | [`bf`][bf]               | `20041219ubuntu5`                                           |                    |
 | [clojure][raw-clojure]     | [`Leiningen`][leiningen] | `stable`                                                    | `Java 8`           |
 | [csharp][raw-csharp]       | [`Mono`][mono]           | `stable`                                                    |                    |
