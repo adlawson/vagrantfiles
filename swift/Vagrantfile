@@ -29,11 +29,11 @@ Vagrant.configure("2") do |config|
      echo "Installing dependencies..."
      apt-get install clang libicu-dev -y > /dev/null 2>&1
      echo "Getting Swift..."
-     wget -q -O swift.tar.gz https://swift.org/builds/swift-2.2.1-release/ubuntu1404/swift-2.2.1-RELEASE/swift-2.2.1-RELEASE-ubuntu14.04.tar.gz > /dev/null 2>&1
+     wget -q -O swift.tar.gz https://swift.org/builds/swift-5.0-release/ubuntu1404/swift-5.0-RELEASE/swift-5.0-RELEASE-ubuntu14.04.tar.gz > /dev/null 2>&1
      echo "Extracting..."
      tar xzf swift.tar.gz --strip-components=1 
      echo "Adding to PATH..."
-     PATH=/opt/swift/usr/bin/:$PATH
+     echo "PATH=/opt/swift/usr/bin/:$PATH" >> /etc/profile
      echo "Cleaning up..."
      rm swift.tar.gz
      echo "Installation successful."
