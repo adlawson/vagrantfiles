@@ -39,6 +39,7 @@ cd /srv
 | [rust][raw-rust]           | [`Cargo`][cargo]         | `stable`                                                    |                    |
 | [scala][raw-scala]         | [`SBT`][sbt]             | `2.11.5`                                                    | `Java 8`           |
 | [scheme][raw-scheme]       |                          | `latest mit-scheme`                                         |                    |
+| [swift][raw-swift]         |                          | `5.0` from [`swift.org`][ppa-swift]                         | `Clang`            |
 
 
 ## Template
@@ -116,6 +117,7 @@ The content of this library is released under the **MIT License** by
 [ppa-nodejs]:  https://launchpad.net/~chris-lea/+archive/node.js
 [ppa-ocaml]:   https://launchpad.net/~avsm/+archive/ubuntu/ppa
 [ppa-php]:     https://launchpad.net/~ondrej/+archive/php5-5.6
+[ppa-swift]:   https://swift.org/download/
 [src-erlang]:  https://www.erlang-solutions.com/downloads/download-erlang-otp
 [src-golang]:  https://golang.org/dl/
 [src-iojs]:    https://iojs.org/dist
@@ -158,3 +160,4 @@ The content of this library is released under the **MIT License** by
 [raw-rust]:      https://raw.githubusercontent.com/adlawson/vagrantfiles/master/rust/Vagrantfile
 [raw-scala]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scala/Vagrantfile
 [raw-scheme]:    https://raw.githubusercontent.com/adlawson/vagrantfiles/master/scheme/Vagrantfile
+[raw-swift]:     https://raw.githubusercontent.com/adlawson/vagrantfiles/master/swift/Vagrantfile
